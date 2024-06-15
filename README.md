@@ -1,6 +1,6 @@
 # To Do Api 
 
-This Api is created so that people can practice to perform some operation with apis.
+This Api is created so that people can practice to perform some operations with apis.
 
 ## Api End-Point
 

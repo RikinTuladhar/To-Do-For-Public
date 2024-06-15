@@ -50,12 +50,16 @@ public class TodoController {
     }
 
     @DeleteMapping("/{id}")
-    ResponseEntity<Void> deleteToDos(@PathVariable("id") int id){
+    ResponseEntity<?> deleteToDos(@PathVariable("id") int id){
         if(toDoRepo.existsById(id)){
             toDoRepo.deleteById(id);
-            return ResponseEntity.ok().build();
+            HashMap<String,String> response = new HashMap<>();
+            response.put("message","deleted");
+            return ResponseEntity.ok(response);
         }else{
-            return ResponseEntity.notFound().build();
+            HashMap<String,String> response = new HashMap<>();
+            response.put("message","something went wrong");
+            return ResponseEntity.badRequest().body(response);
         }
     }
 

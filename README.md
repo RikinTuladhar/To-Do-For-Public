@@ -16,7 +16,7 @@ https://to-do-for-public.onrender.com
 With Http request of post body
 ```
 {
-	"name":"First",
+	"name":"",
 	"complete":false
 }
 ```
